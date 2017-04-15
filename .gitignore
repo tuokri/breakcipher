@@ -30,3 +30,9 @@
 
 # Compiled binaries
 bin/
+
+# Code::Blocks project files
+*.cbp
+*.depend
+*.layout
+
