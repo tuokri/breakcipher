@@ -94,7 +94,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:af5d9ac6a352cba62634da0fb5c774d0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor. <br /></td></tr>
 <tr class="separator:af5d9ac6a352cba62634da0fb5c774d0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b44905ba12d150120bc02abb866b662"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvigenere__square.html#a2b44905ba12d150120bc02abb866b662">vigenere_square</a> (const std::string &amp;i_alphabet)</td></tr>
-<tr class="memdesc:a2b44905ba12d150120bc02abb866b662"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parametrized constructor.  <a href="#a2b44905ba12d150120bc02abb866b662">More...</a><br /></td></tr>
+<tr class="memdesc:a2b44905ba12d150120bc02abb866b662"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parametrized constructor. If i_alphabet contains duplicates, an exception is thrown.  <a href="#a2b44905ba12d150120bc02abb866b662">More...</a><br /></td></tr>
 <tr class="separator:a2b44905ba12d150120bc02abb866b662"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc69751cec3436da2e56998be785a4d9"><td class="memItemLeft" align="right" valign="top"><a id="adc69751cec3436da2e56998be785a4d9"></a>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvigenere__square.html#adc69751cec3436da2e56998be785a4d9">~vigenere_square</a> ()=default</td></tr>
@@ -106,6 +106,26 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <tr class="memitem:a24fd1f0e7d3e2c83fd461cdc00743f54"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvigenere__square.html#a24fd1f0e7d3e2c83fd461cdc00743f54">print</a> (std::ostream &amp;os) const</td></tr>
 <tr class="memdesc:a24fd1f0e7d3e2c83fd461cdc00743f54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print string representation to std::ostream.  <a href="#a24fd1f0e7d3e2c83fd461cdc00743f54">More...</a><br /></td></tr>
 <tr class="separator:a24fd1f0e7d3e2c83fd461cdc00743f54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Data member accessors.</div></td></tr>
+<tr class="memitem:aae4b9bd33928fe0d4233789af98091c7"><td class="memItemLeft" align="right" valign="top"><a id="aae4b9bd33928fe0d4233789af98091c7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>set_ciper</b> (const std::string &amp;n_cipher)</td></tr>
+<tr class="separator:aae4b9bd33928fe0d4233789af98091c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf90213833a0ecae6ae10b4d5c5e3c07"><td class="memItemLeft" align="right" valign="top"><a id="adf90213833a0ecae6ae10b4d5c5e3c07"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>set_key</b> (const std::string &amp;n_key)</td></tr>
+<tr class="separator:adf90213833a0ecae6ae10b4d5c5e3c07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f7ba4c6bbf8c0d379d52f563e547c7c"><td class="memItemLeft" align="right" valign="top"><a id="a0f7ba4c6bbf8c0d379d52f563e547c7c"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>set_plaintext</b> (const std::string &amp;n_plaintext)</td></tr>
+<tr class="separator:a0f7ba4c6bbf8c0d379d52f563e547c7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Data member mutators.</div></td></tr>
+<tr class="memitem:a5246fd392d0cadc11cc7e1ea04b3423d"><td class="memItemLeft" align="right" valign="top"><a id="a5246fd392d0cadc11cc7e1ea04b3423d"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>get_ciper</b> () const</td></tr>
+<tr class="separator:a5246fd392d0cadc11cc7e1ea04b3423d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31c4ed8e5f6ad76af3fef5d24a9c2ab9"><td class="memItemLeft" align="right" valign="top"><a id="a31c4ed8e5f6ad76af3fef5d24a9c2ab9"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>get_plaintext</b> () const</td></tr>
+<tr class="separator:a31c4ed8e5f6ad76af3fef5d24a9c2ab9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbed1c73dd38569996cad0998bcfd9cd"><td class="memItemLeft" align="right" valign="top"><a id="abbed1c73dd38569996cad0998bcfd9cd"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>get_key</b> () const</td></tr>
+<tr class="separator:abbed1c73dd38569996cad0998bcfd9cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a2b44905ba12d150120bc02abb866b662"></a>
@@ -124,10 +144,16 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
       </table>
 </div><div class="memdoc">
 
-<p>Parametrized constructor. </p>
+<p>Parametrized constructor. If i_alphabet contains duplicates, an exception is thrown. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">i_alphabet</td><td>String to represent available characters. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument.</td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -158,6 +184,14 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classvigenere__square_a24fd1f0e7d3e2c83fd461cdc00743f54_cgraph.png" border="0" usemap="#classvigenere__square_a24fd1f0e7d3e2c83fd461cdc00743f54_cgraph" alt=""/></div>
+<map name="classvigenere__square_a24fd1f0e7d3e2c83fd461cdc00743f54_cgraph" id="classvigenere__square_a24fd1f0e7d3e2c83fd461cdc00743f54_cgraph">
+<area shape="rect" id="node2" href="classvigenere__square.html#a6ee1cebcac6882217f02c1d7c33a4b55" title="String representation of the Vigenère table. " alt="" coords="204,5,340,47"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -191,7 +225,7 @@ virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classvigenere__square.html">vigenere_square</a></li>
-    <li class="footer">Generated on Sun Apr 16 2017 11:01:56 for breakcipher by
+    <li class="footer">Generated on Sun Apr 16 2017 15:35:20 for breakcipher by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>

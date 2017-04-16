@@ -96,11 +96,11 @@ WARN_LOGFILE            = "/home/tuomo/Documents/Programming/C++/breakcipher/doc
 # configuration options related to the input files
 #---------------------------------------------------------------------------
 INPUT                  = \
-	"../vigenere_square.cpp" \
-	"../vigenere_square.hpp" \
-	"../stringutils.hpp" \
-	"../main.cpp" \
-	"../stringutils.cpp" 
+	"../src/stringutils.cpp" \
+	"../src/stringutils.hpp" \
+	"../src/vigenere_square.cpp" \
+	"../src/vigenere_square.hpp" \
+	"../src/main.cpp" 
 INPUT_ENCODING         = UTF-8
 FILE_PATTERNS          =
 RECURSIVE              = NO
@@ -256,10 +256,10 @@ PERL_PATH              = /usr/bin/perl
 #---------------------------------------------------------------------------
 # Configuration options related to the dot tool
 #---------------------------------------------------------------------------
-CLASS_DIAGRAMS         = NO
+CLASS_DIAGRAMS         = YES
 MSCGEN_PATH            =
 HIDE_UNDOC_RELATIONS   = YES
-HAVE_DOT               = NO
+HAVE_DOT               = YES
 DOT_NUM_THREADS        = 0
 DOT_FONTNAME           = Helvetica
 DOT_FONTSIZE           = 10
