@@ -1,3 +1,8 @@
+/**
+ * \file stringutils.cpp
+ * \brief stringutils implementation file.
+ */
+
 #include "stringutils.hpp"
 #include <iostream>
 
@@ -11,14 +16,15 @@ namespace stringutils
         }
 
         std::string ret;
-        if(i < 0) // Shift left.
+        if(i < 0)
         {
             i = -i;
             ret = str.substr(i, str.size() - i) + str.substr(0, i);
         }
         else
         {
-            std::cout << "here";
+            ret = str.substr(str.size() - i, str.size()) +
+                  str.substr(0, str.size() - i);
         }
 
         return ret;
