@@ -4,7 +4,7 @@
  */
 
 #include "stringutils.hpp"
-#include <iostream>
+#include <unordered_map>
 
 namespace stringutils
 {
@@ -28,5 +28,34 @@ namespace stringutils
         }
 
         return ret;
+    }
+
+    bool is_all_unique(const std::string& str)
+    {
+        if(str.size() <= 1)
+        {
+            return true;
+        }
+
+        // ASCII
+        if(str.size() > 128)
+        {
+            return false;
+        }
+
+        bool seen[128] = {false};
+        for(auto& c : str)
+        {
+            if(seen[static_cast<int>(c)])
+            {
+                return false;
+            }
+            else
+            {
+                seen[static_cast<int>(c)] = true;
+            }
+        }
+
+        return true;
     }
 }
