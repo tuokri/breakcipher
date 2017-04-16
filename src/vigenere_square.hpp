@@ -10,7 +10,7 @@
 #include <vector>
 
 /**
- * \class vigenere_Square
+ * \class vigenere_square
  * \brief
  */
 class vigenere_square
@@ -23,7 +23,9 @@ class vigenere_square
 
         /**
          * \brief Parametrized constructor.
+         *        If i_alphabet contains duplicates, an exception is thrown.
          * \param i_alphabet String to represent available characters.
+         * \throw std::invalid_argument.
          */
         vigenere_square(const std::string& i_alphabet);
 
@@ -44,9 +46,30 @@ class vigenere_square
          */
         void print(std::ostream& os) const;
 
+        /**
+         *  \name Data member accessors.
+         */
+        //@{
+        void set_ciper(const std::string& n_cipher);
+        void set_key(const std::string& n_key);
+        void set_plaintext(const std::string& n_plaintext);
+        //@}
+
+        /**
+         *  \name Data member mutators.
+         */
+        //@{
+        std::string get_ciper() const;
+        std::string get_plaintext() const;
+        std::string get_key() const;
+        //@}
+
     private:
-        const std::string alphabet;
         std::vector<std::string> table;
+        const std::string alphabet;
+        std::string cipher;
+        std::string key;
+        std::string plaintext;
 };
 
 /**
