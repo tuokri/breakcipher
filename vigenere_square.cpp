@@ -1,3 +1,8 @@
+/**
+ * \file vigenere_square.cpp
+ * \brief vigenere_square implementation file.
+ */
+
 #include <sstream>
 #include <valarray>
 
