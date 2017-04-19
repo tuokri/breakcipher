@@ -4,7 +4,6 @@
  */
 
 #include <sstream>
-#include <valarray>
 #include <exception>
 #include <stdexcept>
 
