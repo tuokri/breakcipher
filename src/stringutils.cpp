@@ -43,18 +43,19 @@ namespace stringutils
 
     bool is_all_unique(const std::string& str)
     {
+        int ASCII_SIZE = 128;
+
         if(str.size() <= 1)
         {
             return true;
         }
 
-        // ASCII
-        if(str.size() > 128)
+        if(str.size() > ASCII_SIZE)
         {
             return false;
         }
 
-        bool seen[128] = {false};
+        bool seen[ASCII_SIZE] = {false};
         for(auto& c : str)
         {
             if(seen[static_cast<int>(c)])

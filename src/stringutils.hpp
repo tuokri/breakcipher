@@ -28,6 +28,7 @@ namespace stringutils
 
     /**
      * \brief Checks if string contains all unique characters (no duplicates).
+     *        NOTE: This function assumes ASCII encoding.
      * \param str Reference to string to check for uniqueness.
      * \return true if all unique, else false.
      */
