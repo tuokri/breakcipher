@@ -10,6 +10,7 @@
 #include <stdexcept>
 
 #include "vigenere_square.hpp"
+#include "stringutils.hpp"
 
 /**
  * \brief Main function for user I/O and error handling.
@@ -27,8 +28,8 @@ int main()
     std::stringstream ss;
 
     std::cout << "Input alphabet and press ENTER. Input '_DEFAULT_' " <<
-                 "to use default alphabet." << std::endl;
-    std::cin >> std::skipws >> alphabet;
+                 "to use default English alphabet." << std::endl;
+    std::cin >> std::skipws >> alphabet;z
 
     if(alphabet == "_DEFAULT_")
     {
@@ -37,7 +38,7 @@ int main()
 
     try
     {
-        vigenere_square vsq{alphabet};
+        vigenere_square vsq{stringutils::uppercase(alphabet)};
     }
     catch(std::invalid_argument e)
     {
