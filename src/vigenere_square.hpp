@@ -11,15 +11,17 @@
 
 /**
  * \class vigenere_square
- * \brief
+ * \brief Represents a Vigenère square initialized with a certain alphabet,
+ *        to which strings can be passed for encryption or decryption.
  */
 class vigenere_square
 {
     public:
+
         /**
          * \brief Default constructor.
          */
-        vigenere_square() = delete;
+        vigenere_square();
 
         /**
          * \brief Parametrized constructor.
@@ -34,6 +36,8 @@ class vigenere_square
          */
         virtual ~vigenere_square() = default;
 
+        vigenere_square& operator=(const vigenere_square& rhs);
+
         /**
          * \brief String representation of the Vigenère table.
          * \return std::string.
@@ -46,30 +50,85 @@ class vigenere_square
          */
         void print(std::ostream& os) const;
 
-        /**
-         *  \name Data member accessors.
+        /** TODO: DOCS
+         *
          */
-        //@{
-        void set_ciper(const std::string& n_cipher);
-        void set_key(const std::string& n_key);
-        void set_plaintext(const std::string& n_plaintext);
-        //@}
+        int find_keycolindex(char keychar);
+
+        /** TODO: DOCS
+         *
+         */
+        int find_plainrowindex(int keycolindex, char plainchar);
+
+        /**
+         * \brief Encrypt a string using the vigenere_square instance's
+         *        data member table.
+         * \param Reference to the string to be encrypted.
+         * \return Encrypted string.
+         */
+        std::string encrypt(const std::string& str_plain,
+                            const std::string& key);
+
+        /**
+         * \brief Decrypt a string using the vigenere_square instance's
+         *        data member table.
+         * \param Reference to the string to be decrypted.
+         * \return Decrypted string.
+         */
+        std::string decrypt(const std::string& str_cipher,
+                            const std::string& key);
 
         /**
          *  \name Data member mutators.
          */
         //@{
-        std::string get_ciper() const;
+        /**
+         * \param n_cipher New value for cipher.
+         */
+        void set_cipher(const std::string& n_cipher);
+
+        /**
+         * \param n_key New value for key.
+         */
+        void set_key(const std::string& n_key);
+
+        /**
+         * \param n_plaintext New value for plaintext.
+         */
+        void set_plaintext(const std::string& n_plaintext);
+        //@}
+
+        /**
+         *  \name Data member accessors.
+         */
+        //@{
+        /**
+         * \return Data member cipher.
+         */
+        std::string get_cipher() const;
+
+        /**
+         * \return Data member plaintext.
+         */
         std::string get_plaintext() const;
+
+        /**
+         * \return Data member key.
+         */
         std::string get_key() const;
+
+        /**
+         * \return Data member alphabet.
+         */
+        std::string get_alphabet() const;
         //@}
 
     private:
-        std::vector<std::string> table;
-        const std::string alphabet;
-        std::string cipher;
+        std::string alphabet;
         std::string key;
+        std::string cipher;
         std::string plaintext;
+        std::vector<std::string> table;
 };
 
 /**
