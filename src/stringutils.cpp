@@ -5,6 +5,7 @@
 
 #include "stringutils.hpp"
 #include <unordered_map>
+#include <algorithm>
 
 namespace stringutils
 {
@@ -27,6 +28,16 @@ namespace stringutils
                   str.substr(0, str.size() - i);
         }
 
+        return ret;
+    }
+
+    std::string uppercase(const std::string& str)
+    {
+        std::string ret;
+        for(const auto& c : str)
+        {
+            ret += std::toupper(c);
+        }
         return ret;
     }
 

@@ -12,6 +12,8 @@ namespace stringutils
 {
     std::string shift(const std::string& str, int i);
 
+    std::string uppercase(const std::string& str);
+
     bool is_all_unique(const std::string& str);
 }
 
