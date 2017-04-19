@@ -48,85 +48,55 @@ std::string vigenere_square::to_string() const
     return ss.str();
 }
 
-void vigenere_square::print(std::ostream& os) const
-{
-    os << this->to_string();
-}
-
-int vigenere_square::find_keycolindex(char keychar)
-{
-    bool found = false;
-    unsigned int i;
-
-    for(i = 0; i < alphabet.size(); i++)
-    {
-        if(alphabet[i] == keychar)
-        {
-            found = true;
-            break;
-        }
-    }
-
-    if(found)
-    {
-        return i;
-    }
-    else
-    {
-        return -1;
-    }
-}
-
-int vigenere_square::find_plainrowindex(int keycolindex, char plainchar)
-{
-    if(keycolindex < 0 || keycolindex >= static_cast<int>(alphabet.size()))
-    {
-        std::stringstream ss;
-        ss << "keycolindex out of range [0," << alphabet.size() <<
-              "[ " << "where keycolindex is " << keycolindex << ".";
-
-        throw std::invalid_argument(ss.str());
-    }
-
-    return alphabet.find(plainchar);
-}
-
-std::string vigenere_square::encrypt(const std::string& str_plain,
+std::string vigenere_square::encrypt(const std::string& plaintext,
                                      const std::string& key)
 {
-
     std::string cipher;
-    char keychar;
-    int kci = 0;
-    int pci = 0;
+    char char_key;
+    int col_key = 0;
+    int row_plain = 0;
     int k = 0;
 
-    for(const auto& plainchar : str_plain)
+    for(const auto& char_plain : plaintext)
     {
-        keychar = key[k];
+        char_key = key[k];
         k = (k + 1) % key.size();
-        kci = find_keycolindex(keychar);
-        pci = find_plainrowindex(kci, plainchar);
-        cipher += table[pci][kci];
+        col_key = alphabet.find(char_key);
+        row_plain = alphabet.find(char_plain);
+        cipher += table[row_plain][col_key];
     }
 
     return cipher;
-
-    /*
-    char keychar = key[0];
-    int keyrowindex = find_keyrowindex(keychar);
-
-    char plainchar = str_plain[0];
-    int plaincharindex = find_plaincharindex(keyrowindex, plainchar);
-
-    char cipherchar = table[0][plaincharindex];
-    */
 }
 
-std::string vigenere_square::decrypt(const std::string& str_cipher,
+std::string vigenere_square::decrypt(const std::string& cipher,
                                      const std::string& key)
 {
-    return std::string{str_cipher};
+    std::string plaintext;
+    char char_key;
+    int col_key = 0;
+    int k = 0;
+
+    for(const auto& char_cipher : cipher)
+    {
+        char_key = key[k];
+        k = (k + 1) % key.size();
+        col_key = alphabet.find(char_key);
+
+        int row_plain = 0;
+        for(const auto& row : table)
+        {
+            if(row[col_key] == char_cipher)
+            {
+                break;
+            }
+            row_plain++;
+        }
+
+        plaintext += alphabet[row_plain];
+    }
+
+    return plaintext;
 }
 
 std::ostream& operator<<(std::ostream& os, const vigenere_square& vsq)

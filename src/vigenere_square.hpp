@@ -55,34 +55,24 @@ class vigenere_square
          */
         void print(std::ostream& os) const;
 
-        /** TODO: DOCS
-         *
-         */
-        int find_keycolindex(char keychar);
-
-        /** TODO: DOCS
-         *
-         */
-        int find_plainrowindex(int keycolindex, char plainchar);
-
         /**
          * \brief Encrypt a string using the vigenere_square instance's
          *        data member table.
-         * \param str_plain Reference to the string to be encrypted.
+         * \param plaintext Reference to the string to be encrypted.
          * \param key Reference to the key used in encryption.
          * \return Encrypted string.
          */
-        std::string encrypt(const std::string& str_plain,
+        std::string encrypt(const std::string& plaintext,
                             const std::string& key);
 
         /**
          * \brief Decrypt a string using the vigenere_square instance's
          *        data member table.
-         * \param str_cipher Reference to the string to be decrypted.
+         * \param cipher Reference to the string to be decrypted.
          * \param key Reference to the key used in decryption.
          * \return Decrypted string.
          */
-        std::string decrypt(const std::string& str_cipher,
+        std::string decrypt(const std::string& chipher,
                             const std::string& key);
 
     private:
