@@ -1,9 +1,9 @@
 var indexSectionsWithContent =
 {
-  0: "defgimopstuv~",
+  0: "deimopstuv~",
   1: "v",
   2: "msv",
-  3: "defgimopstuv~"
+  3: "deimopstuv~"
 };
 
 var indexSectionNames =

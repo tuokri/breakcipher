@@ -1,0 +1,3 @@
+/home/tuomo/Documents/Programming/C++/breakcipher/src/vigenere_square.hpp:69: warning: argument 'cipher' of command @param is not found in the argument list of vigenere_square::decrypt(const std::string &chipher, const std::string &key)
+/home/tuomo/Documents/Programming/C++/breakcipher/src/vigenere_square.hpp:75: warning: The following parameters of vigenere_square::decrypt(const std::string &chipher, const std::string &key) are not documented:
+  parameter 'chipher'

@@ -1,5 +1,4 @@
 <map id="main" name="main">
-<area shape="rect" id="node2" href="$classvigenere__square.html#a78d337eefd2b4e1611b1417af4696309" title="Encrypt a string using the vigenere_square instance&#39;s data member table. " alt="" coords="104,46,272,73"/>
-<area shape="rect" id="node3" href="$classvigenere__square.html#aa36027ed524fc17f4a0003d313a7cd71" title="vigenere_square::find\l_keycolindex" alt="" coords="320,5,467,47"/>
-<area shape="rect" id="node4" href="$classvigenere__square.html#a0c27342b644e81f0a341d9b7a935da2c" title="vigenere_square::find\l_plainrowindex" alt="" coords="320,71,467,112"/>
+<area shape="rect" id="node2" href="$classvigenere__square.html#a10d768d43da927350f9de466bff58f2d" title="Encrypt a string using the vigenere_square instance&#39;s data member table. " alt="" coords="104,5,272,32"/>
+<area shape="rect" id="node3" href="$classvigenere__square.html#a1e05943eb7aa6c540fbe4028ed62df8f" title="Decrypt a string using the vigenere_square instance&#39;s data member table. " alt="" coords="104,56,272,83"/>
 </map>
