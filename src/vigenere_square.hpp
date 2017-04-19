@@ -63,7 +63,8 @@ class vigenere_square
         /**
          * \brief Encrypt a string using the vigenere_square instance's
          *        data member table.
-         * \param Reference to the string to be encrypted.
+         * \param str_plain Reference to the string to be encrypted.
+         * \param key Reference to the key used in encryption.
          * \return Encrypted string.
          */
         std::string encrypt(const std::string& str_plain,
@@ -72,7 +73,8 @@ class vigenere_square
         /**
          * \brief Decrypt a string using the vigenere_square instance's
          *        data member table.
-         * \param Reference to the string to be decrypted.
+         * \param str_cipher Reference to the string to be decrypted.
+         * \param key Reference to the key used in decryption.
          * \return Decrypted string.
          */
         std::string decrypt(const std::string& str_cipher,
