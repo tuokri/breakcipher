@@ -86,9 +86,18 @@ $(document).ready(function(){initNavTree('classvigenere__square.html','');});
 <div class="title">vigenere_square Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Represents a Vigenère square initialized with a certain alphabet, to which strings can be passed for encryption or decryption.  
+ <a href="classvigenere__square.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="vigenere__square_8hpp_source.html">vigenere_square.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a32fdd5e75eed2075568220017f61f542"><td class="memItemLeft" align="right" valign="top"><a id="a32fdd5e75eed2075568220017f61f542"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvigenere__square.html#a32fdd5e75eed2075568220017f61f542">vigenere_square</a> ()</td></tr>
+<tr class="memdesc:a32fdd5e75eed2075568220017f61f542"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor. <br /></td></tr>
+<tr class="separator:a32fdd5e75eed2075568220017f61f542"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b44905ba12d150120bc02abb866b662"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvigenere__square.html#a2b44905ba12d150120bc02abb866b662">vigenere_square</a> (const std::string &amp;i_alphabet)</td></tr>
 <tr class="memdesc:a2b44905ba12d150120bc02abb866b662"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parametrized constructor. If i_alphabet contains duplicates, an exception is thrown.  <a href="#a2b44905ba12d150120bc02abb866b662">More...</a><br /></td></tr>
 <tr class="separator:a2b44905ba12d150120bc02abb866b662"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -96,38 +105,45 @@ Public Member Functions</h2></td></tr>
 virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvigenere__square.html#adc69751cec3436da2e56998be785a4d9">~vigenere_square</a> ()=default</td></tr>
 <tr class="memdesc:adc69751cec3436da2e56998be785a4d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default destructor. <br /></td></tr>
 <tr class="separator:adc69751cec3436da2e56998be785a4d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4734d6f973c623a3e5b0101972311da"><td class="memItemLeft" align="right" valign="top"><a id="aa4734d6f973c623a3e5b0101972311da"></a>
+<a class="el" href="classvigenere__square.html">vigenere_square</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const <a class="el" href="classvigenere__square.html">vigenere_square</a> &amp;rhs)</td></tr>
+<tr class="separator:aa4734d6f973c623a3e5b0101972311da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ee1cebcac6882217f02c1d7c33a4b55"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvigenere__square.html#a6ee1cebcac6882217f02c1d7c33a4b55">to_string</a> () const</td></tr>
 <tr class="memdesc:a6ee1cebcac6882217f02c1d7c33a4b55"><td class="mdescLeft">&#160;</td><td class="mdescRight">String representation of the Vigenère table.  <a href="#a6ee1cebcac6882217f02c1d7c33a4b55">More...</a><br /></td></tr>
 <tr class="separator:a6ee1cebcac6882217f02c1d7c33a4b55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a24fd1f0e7d3e2c83fd461cdc00743f54"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvigenere__square.html#a24fd1f0e7d3e2c83fd461cdc00743f54">print</a> (std::ostream &amp;os) const</td></tr>
 <tr class="memdesc:a24fd1f0e7d3e2c83fd461cdc00743f54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print string representation to std::ostream.  <a href="#a24fd1f0e7d3e2c83fd461cdc00743f54">More...</a><br /></td></tr>
 <tr class="separator:a24fd1f0e7d3e2c83fd461cdc00743f54"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c67bf852761baddf19fd53b6fc52ac4"><td class="memItemLeft" align="right" valign="top"><a id="a7c67bf852761baddf19fd53b6fc52ac4"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>to_plaintext</b> ()</td></tr>
-<tr class="separator:a7c67bf852761baddf19fd53b6fc52ac4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afae5fd690346904e87a11a5a830db9b3"><td class="memItemLeft" align="right" valign="top"><a id="afae5fd690346904e87a11a5a830db9b3"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>to_cipher</b> ()</td></tr>
-<tr class="separator:afae5fd690346904e87a11a5a830db9b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5d9ac6a352cba62634da0fb5c774d0f"><td class="memItemLeft" align="right" valign="top"><a id="af5d9ac6a352cba62634da0fb5c774d0f"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvigenere__square.html#af5d9ac6a352cba62634da0fb5c774d0f">vigenere_square</a> ()=delete</td></tr>
-<tr class="memdesc:af5d9ac6a352cba62634da0fb5c774d0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor. Not implemented. <br /></td></tr>
-<tr class="separator:af5d9ac6a352cba62634da0fb5c774d0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader">Data member accessors.</div></td></tr>
+<tr class="memitem:aa36027ed524fc17f4a0003d313a7cd71"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvigenere__square.html#aa36027ed524fc17f4a0003d313a7cd71">find_keycolindex</a> (char keychar)</td></tr>
+<tr class="separator:aa36027ed524fc17f4a0003d313a7cd71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c27342b644e81f0a341d9b7a935da2c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvigenere__square.html#a0c27342b644e81f0a341d9b7a935da2c">find_plainrowindex</a> (int keycolindex, char plainchar)</td></tr>
+<tr class="separator:a0c27342b644e81f0a341d9b7a935da2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78d337eefd2b4e1611b1417af4696309"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvigenere__square.html#a78d337eefd2b4e1611b1417af4696309">encrypt</a> (const std::string &amp;str_plain, const std::string &amp;key)</td></tr>
+<tr class="memdesc:a78d337eefd2b4e1611b1417af4696309"><td class="mdescLeft">&#160;</td><td class="mdescRight">Encrypt a string using the <a class="el" href="classvigenere__square.html" title="Represents a Vigenère square initialized with a certain alphabet, to which strings can be passed for ...">vigenere_square</a> instance's data member table.  <a href="#a78d337eefd2b4e1611b1417af4696309">More...</a><br /></td></tr>
+<tr class="separator:a78d337eefd2b4e1611b1417af4696309"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c360b5b5e42412cddf4117678471be2"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvigenere__square.html#a5c360b5b5e42412cddf4117678471be2">decrypt</a> (const std::string &amp;str_cipher, const std::string &amp;key)</td></tr>
+<tr class="memdesc:a5c360b5b5e42412cddf4117678471be2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Decrypt a string using the <a class="el" href="classvigenere__square.html" title="Represents a Vigenère square initialized with a certain alphabet, to which strings can be passed for ...">vigenere_square</a> instance's data member table.  <a href="#a5c360b5b5e42412cddf4117678471be2">More...</a><br /></td></tr>
+<tr class="separator:a5c360b5b5e42412cddf4117678471be2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Data member mutators.</div></td></tr>
 <tr class="memitem:a9f04e33684c4a6e80208053f13b997b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvigenere__square.html#a9f04e33684c4a6e80208053f13b997b7">set_cipher</a> (const std::string &amp;n_cipher)</td></tr>
 <tr class="separator:a9f04e33684c4a6e80208053f13b997b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf90213833a0ecae6ae10b4d5c5e3c07"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvigenere__square.html#adf90213833a0ecae6ae10b4d5c5e3c07">set_key</a> (const std::string &amp;n_key)</td></tr>
 <tr class="separator:adf90213833a0ecae6ae10b4d5c5e3c07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f7ba4c6bbf8c0d379d52f563e547c7c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvigenere__square.html#a0f7ba4c6bbf8c0d379d52f563e547c7c">set_plaintext</a> (const std::string &amp;n_plaintext)</td></tr>
 <tr class="separator:a0f7ba4c6bbf8c0d379d52f563e547c7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader">Data member mutators.</div></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Data member accessors.</div></td></tr>
 <tr class="memitem:ab40b391ce4a0d60df95f310e80234034"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvigenere__square.html#ab40b391ce4a0d60df95f310e80234034">get_cipher</a> () const</td></tr>
 <tr class="separator:ab40b391ce4a0d60df95f310e80234034"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31c4ed8e5f6ad76af3fef5d24a9c2ab9"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvigenere__square.html#a31c4ed8e5f6ad76af3fef5d24a9c2ab9">get_plaintext</a> () const</td></tr>
 <tr class="separator:a31c4ed8e5f6ad76af3fef5d24a9c2ab9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abbed1c73dd38569996cad0998bcfd9cd"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvigenere__square.html#abbed1c73dd38569996cad0998bcfd9cd">get_key</a> () const</td></tr>
 <tr class="separator:abbed1c73dd38569996cad0998bcfd9cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a604def38075f977ea005ffa4c6a2dbac"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classvigenere__square.html#a604def38075f977ea005ffa4c6a2dbac">get_alphabet</a> () const</td></tr>
+<tr class="separator:a604def38075f977ea005ffa4c6a2dbac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Represents a Vigenère square initialized with a certain alphabet, to which strings can be passed for encryption or decryption. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a2b44905ba12d150120bc02abb866b662"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2b44905ba12d150120bc02abb866b662">&#9670;&nbsp;</a></span>vigenere_square()</h2>
 
@@ -161,6 +177,157 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><b>to_cipher</b> 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a5c360b5b5e42412cddf4117678471be2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c360b5b5e42412cddf4117678471be2">&#9670;&nbsp;</a></span>decrypt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string vigenere_square::decrypt </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>str_cipher</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>key</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Decrypt a string using the <a class="el" href="classvigenere__square.html" title="Represents a Vigenère square initialized with a certain alphabet, to which strings can be passed for ...">vigenere_square</a> instance's data member table. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str_cipher</td><td>Reference to the string to be decrypted. </td></tr>
+    <tr><td class="paramname">key</td><td>Reference to the key used in decryption. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Decrypted string. </dd></dl>
+
+</div>
+</div>
+<a id="a78d337eefd2b4e1611b1417af4696309"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78d337eefd2b4e1611b1417af4696309">&#9670;&nbsp;</a></span>encrypt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string vigenere_square::encrypt </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>str_plain</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>key</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Encrypt a string using the <a class="el" href="classvigenere__square.html" title="Represents a Vigenère square initialized with a certain alphabet, to which strings can be passed for ...">vigenere_square</a> instance's data member table. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">str_plain</td><td>Reference to the string to be encrypted. </td></tr>
+    <tr><td class="paramname">key</td><td>Reference to the key used in encryption. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Encrypted string. </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classvigenere__square_a78d337eefd2b4e1611b1417af4696309_cgraph.png" border="0" usemap="#classvigenere__square_a78d337eefd2b4e1611b1417af4696309_cgraph" alt=""/></div>
+<map name="classvigenere__square_a78d337eefd2b4e1611b1417af4696309_cgraph" id="classvigenere__square_a78d337eefd2b4e1611b1417af4696309_cgraph">
+<area shape="rect" id="node2" href="classvigenere__square.html#aa36027ed524fc17f4a0003d313a7cd71" title="vigenere_square::find\l_keycolindex" alt="" coords="221,5,368,47"/>
+<area shape="rect" id="node3" href="classvigenere__square.html#a0c27342b644e81f0a341d9b7a935da2c" title="vigenere_square::find\l_plainrowindex" alt="" coords="221,71,368,112"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa36027ed524fc17f4a0003d313a7cd71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa36027ed524fc17f4a0003d313a7cd71">&#9670;&nbsp;</a></span>find_keycolindex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int vigenere_square::find_keycolindex </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>keychar</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>TODO: DOCS </p>
+
+</div>
+</div>
+<a id="a0c27342b644e81f0a341d9b7a935da2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c27342b644e81f0a341d9b7a935da2c">&#9670;&nbsp;</a></span>find_plainrowindex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int vigenere_square::find_plainrowindex </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>keycolindex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>plainchar</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>TODO: DOCS </p>
+
+</div>
+</div>
+<a id="a604def38075f977ea005ffa4c6a2dbac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a604def38075f977ea005ffa4c6a2dbac">&#9670;&nbsp;</a></span>get_alphabet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string vigenere_square::get_alphabet </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>Data member alphabet. </dd></dl>
+
+</div>
+</div>
 <a id="ab40b391ce4a0d60df95f310e80234034"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab40b391ce4a0d60df95f310e80234034">&#9670;&nbsp;</a></span>get_cipher()</h2>
 
@@ -351,7 +518,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classvigenere__square.html">vigenere_square</a></li>
-    <li class="footer">Generated on Sun Apr 16 2017 19:07:53 for breakcipher by
+    <li class="footer">Generated on Wed Apr 19 2017 17:04:05 for breakcipher by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>
