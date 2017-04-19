@@ -35,10 +35,6 @@ vigenere_square& vigenere_square::operator=(const vigenere_square& rhs)
     this->alphabet = rhs.alphabet;
     this->table = rhs.table;
 
-    this->cipher = rhs.cipher;
-    this->key = rhs.key;
-    this->plaintext = rhs.plaintext;
-
     return *this;
 }
 
@@ -131,41 +127,6 @@ std::string vigenere_square::decrypt(const std::string& str_cipher,
                                      const std::string& key)
 {
     return std::string{str_cipher};
-}
-
-void vigenere_square::set_cipher(const std::string& n_cipher)
-{
-    cipher = n_cipher;
-}
-
-void vigenere_square::set_key(const std::string& n_key)
-{
-    key = n_key;
-}
-
-void vigenere_square::set_plaintext(const std::string& n_plaintext)
-{
-    plaintext = n_plaintext;
-}
-
-std::string vigenere_square::get_cipher() const
-{
-    return cipher;
-}
-
-std::string vigenere_square::get_plaintext() const
-{
-    return plaintext;
-}
-
-std::string vigenere_square::get_key() const
-{
-    return key;
-}
-
-std::string vigenere_square::get_alphabet() const
-{
-    return alphabet;
 }
 
 std::ostream& operator<<(std::ostream& os, const vigenere_square& vsq)

@@ -36,6 +36,11 @@ class vigenere_square
          */
         virtual ~vigenere_square() = default;
 
+        /**
+         * \brief operator= overload. Copy assignment.
+         * \param rhs Reference to vigenere_square.
+         * \return Reference to vigenere_square.
+         */
         vigenere_square& operator=(const vigenere_square& rhs);
 
         /**
@@ -80,56 +85,8 @@ class vigenere_square
         std::string decrypt(const std::string& str_cipher,
                             const std::string& key);
 
-        /**
-         *  \name Data member mutators.
-         */
-        //@{
-        /**
-         * \param n_cipher New value for cipher.
-         */
-        void set_cipher(const std::string& n_cipher);
-
-        /**
-         * \param n_key New value for key.
-         */
-        void set_key(const std::string& n_key);
-
-        /**
-         * \param n_plaintext New value for plaintext.
-         */
-        void set_plaintext(const std::string& n_plaintext);
-        //@}
-
-        /**
-         *  \name Data member accessors.
-         */
-        //@{
-        /**
-         * \return Data member cipher.
-         */
-        std::string get_cipher() const;
-
-        /**
-         * \return Data member plaintext.
-         */
-        std::string get_plaintext() const;
-
-        /**
-         * \return Data member key.
-         */
-        std::string get_key() const;
-
-        /**
-         * \return Data member alphabet.
-         */
-        std::string get_alphabet() const;
-        //@}
-
     private:
         std::string alphabet;
-        std::string key;
-        std::string cipher;
-        std::string plaintext;
         std::vector<std::string> table;
 };
 
